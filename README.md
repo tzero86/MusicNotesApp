@@ -5,6 +5,7 @@ The user can click on the boxes to start making some music right away.
 
 Features:
 
+- Added Bootstrap 3.3.7!! (The Idea is to make this shit responsive at some point)
 - Not much capabilities at this point, just 7 boxes containing the main notes.
 - Audio files for each note were added in the following formats for maximum compatibility (ogg, mp3 and wav).
 - Added Key Bindings to trigger notes on keypress events.

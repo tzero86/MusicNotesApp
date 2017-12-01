@@ -6,7 +6,9 @@ var gNote = document.getElementById("gAudio");
 var aNote = document.getElementById("aAudio");
 var bNote = document.getElementById("bAudio");
 
-
+$('#about').mousedown(function(e) {
+    alert("Made by QC Slave from Sector 7G, with JavaScript and lovely ranting about my Salary as a tester.");
+});
 
 // Event handlers for C Note binded to A key.
 $(document).keypress(function(e) {

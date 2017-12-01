@@ -10,77 +10,132 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script
 			  src="https://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous"></script>
-   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+   
 </head>
 
 <body>
-    <div class="information">
-        <h1>Jipi's Music Maker</h1>
-        <p>Welcome to Jipi's Music Maker, a very lame site with some buttons that play notes. So Maybe you can click them in different order to make some music? worth a try?.</p>
-        <h3>Now with Keys assigned!</h3>
-        <p>You can now use the mapped keys to trigger the sounds. And also combined them with the mouse buttons.</p>
-        <ul>
-            <li>C is Assigned to Key A.</li>
-            <li>D is Assigned to Key S.</li>
-            <li>E is Assigned to Key D.</li>
-            <li>F is Assigned to Key F.</li>
-            <li>G is Assigned to Key G.</li>
-            <li>A is Assigned to Key H.</li>
-            <li>B is Assigned to Key J.</li>
-        </ul>
-    </div>
-    
-    <audio id="cAudio">
-        <source src="Media/c_note.mp3" type="audio/mpeg" />
-        <source src="Media/c_note.ogg" type="audio/mpeg" />
-        <source src="Media/c_note.wav" type="audio/mpeg" />
-    </audio>
-    <audio id="dAudio">
-        <source src="Media/d_note.mp3" type="audio/mpeg" />
-        <source src="Media/d_note.ogg" type="audio/mpeg" />
-        <source src="Media/d_note.wav" type="audio/mpeg" />
-    </audio>
-    <audio id="eAudio">
-        <source src="Media/e_note.mp3" type="audio/mpeg" />
-        <source src="Media/e_note.ogg" type="audio/mpeg" />
-        <source src="Media/e_note.wav" type="audio/mpeg" />
-    </audio>
-    <audio id="fAudio">
-        <source src="Media/f_note.mp3" type="audio/mpeg" />
-        <source src="Media/f_note.ogg" type="audio/mpeg" />
-        <source src="Media/f_note.wav" type="audio/mpeg" />
-    </audio>
-    <audio id="gAudio">
-        <source src="Media/g_note.mp3" type="audio/mpeg" />
-        <source src="Media/g_note.ogg" type="audio/mpeg" />
-        <source src="Media/g_note.wav" type="audio/mpeg" />
-    </audio>
-    <audio id="aAudio">
-        <source src="Media/a_note.mp3" type="audio/mpeg" />
-        <source src="Media/a_note.ogg" type="audio/mpeg" />
-        <source src="Media/a_note.wav" type="audio/mpeg" />
-    </audio>
-    <audio id="bAudio">
-        <source src="Media/b_note.mp3" type="audio/mpeg" />
-        <source src="Media/b_note.ogg" type="audio/mpeg" />
-        <source src="Media/b_note.wav" type="audio/mpeg" />
-    </audio>
-    
-    <div id="instrument">
-        <div id="c" class="box"></div>
-        <div id="d" class="box"></div>
-        <div id="e" class="box"></div>
-        <div id="f" class="box"></div>
-        <div id="g" class="box"></div>
-        <div id="a" class="box"></div>
-        <div id="b" class="box"></div>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Jipi's Music Maker</a>
     </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+    
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="about">About</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container information">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Welcome to Jipi's Music Maker, a very lame site with some buttons that play notes. So Maybe you can click them in different order to make some music? worth a try?.</p>
+                <h3>Now with Keys assigned!</h3>
+                <p>You can now use the mapped keys to trigger the sounds. And also combined them with the mouse buttons.</p>
+                <ul>
+                    <li>C is Assigned to Key A.</li>
+                    <li>D is Assigned to Key S.</li>
+                    <li>E is Assigned to Key D.</li>
+                    <li>F is Assigned to Key F.</li>
+                    <li>G is Assigned to Key G.</li>
+                    <li>A is Assigned to Key H.</li>
+                    <li>B is Assigned to Key J.</li>
+                </ul> 
+                <audio id="cAudio">
+                    <source src="Media/c_note.mp3" type="audio/mpeg" />
+                    <source src="Media/c_note.ogg" type="audio/mpeg" />
+                    <source src="Media/c_note.wav" type="audio/mpeg" />
+                </audio>
+                <audio id="dAudio">
+                    <source src="Media/d_note.mp3" type="audio/mpeg" />
+                    <source src="Media/d_note.ogg" type="audio/mpeg" />
+                    <source src="Media/d_note.wav" type="audio/mpeg" />
+                </audio>
+                <audio id="eAudio">
+                    <source src="Media/e_note.mp3" type="audio/mpeg" />
+                    <source src="Media/e_note.ogg" type="audio/mpeg" />
+                    <source src="Media/e_note.wav" type="audio/mpeg" />
+                </audio>
+                <audio id="fAudio">
+                    <source src="Media/f_note.mp3" type="audio/mpeg" />
+                    <source src="Media/f_note.ogg" type="audio/mpeg" />
+                    <source src="Media/f_note.wav" type="audio/mpeg" />
+                </audio>
+                <audio id="gAudio">
+                    <source src="Media/g_note.mp3" type="audio/mpeg" />
+                    <source src="Media/g_note.ogg" type="audio/mpeg" />
+                    <source src="Media/g_note.wav" type="audio/mpeg" />
+                </audio>
+                <audio id="aAudio">
+                    <source src="Media/a_note.mp3" type="audio/mpeg" />
+                    <source src="Media/a_note.ogg" type="audio/mpeg" />
+                    <source src="Media/a_note.wav" type="audio/mpeg" />
+                </audio>
+                <audio id="bAudio">
+                    <source src="Media/b_note.mp3" type="audio/mpeg" />
+                    <source src="Media/b_note.ogg" type="audio/mpeg" />
+                    <source src="Media/b_note.wav" type="audio/mpeg" />
+                </audio>
+                <div class="row">
+                    <div class="col-lg-12"></div>
+                    <div id="instrument">
+                    <div id="c" class="box">
+                        <h4>C</h4>
+                    </div>
+                    <div id="d" class="box">
+                         <h4>D</h4>
+                    </div>
+                    <div id="e" class="box">
+                         <h4>E</h4>
+                    </div>
+                    <div id="f" class="box">
+                         <h4>F</h4>
+                    </div>
+                    <div id="g" class="box">
+                         <h4>G</h4>
+                    </div>
+                    <div id="a" class="box">
+                         <h4>A</h4>
+                    </div>
+                    <div id="b" class="box">
+                         <h4>B</h4>
+                    </div>
+                </div>
+    
+                </div>
+                
+                
+                
+            </div>
+            
+    </div>
+        
+        </div>
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   
 </body>
