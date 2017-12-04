@@ -5,6 +5,14 @@ var fNote = document.getElementById("fAudio");
 var gNote = document.getElementById("gAudio");
 var aNote = document.getElementById("aAudio");
 var bNote = document.getElementById("bAudio");
+var btnC = document.getElementById("btnC");
+var synth;
+
+btnC.addEventListener('click', function() {
+    synth = new Tone.Synth().toMaster();
+    synth.triggerAttackRelease('C5', '2n');
+  });
+
 
 $('#about').mousedown(function(e) {
     alert("Made by QC Slave from Sector 7G, with JavaScript and lovely ranting about my Salary as a tester.");
@@ -17,6 +25,8 @@ $(document).keypress(function(e) {
     if (code === 97) {  
        cNote.currentTime = 0;
        cNote.play();
+       synth = new Tone.Synth().toMaster();
+       synth.triggerAttackRelease('C5', '2n');
     }
 });
 
@@ -112,3 +122,4 @@ $('#b').mousedown(function() {
     bNote.currentTime = 0;
     bNote.play();
 });
+
